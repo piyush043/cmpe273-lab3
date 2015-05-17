@@ -12,10 +12,10 @@ import net.openhft.chronicle.map.ChronicleMapBuilder;
 import edu.sjsu.cmpe.cache.domain.Entry;
 
 public class ChronicleMapCache implements CacheInterface{
-
-    private static String pathname = "C:\\temp\\chronicleHM.txt";
+    private static String tmpDir = System.getProperty("java.io.tmpdir");
+    private static String pathname = tmpDir + "/chronicleHM.txt";
     private File file;
-	private ConcurrentMap<Long, Entry> map; 
+	private ConcurrentMap<Long, Entry> map;
 	
 	public ChronicleMapCache() {
 		ChronicleMapBuilder<Long, Entry> builder = ChronicleMapBuilder.of(Long.class, Entry.class)
