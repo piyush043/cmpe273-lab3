@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe.cache.client.CacheService;
+package edu.sjsu.cmpe.cache.client.cacheService;
 
 /**
  * Cache Service Interface

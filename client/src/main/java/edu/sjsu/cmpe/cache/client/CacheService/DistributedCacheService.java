@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe.cache.client.CacheService;
+package edu.sjsu.cmpe.cache.client.cacheService;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
@@ -17,7 +17,7 @@ public class DistributedCacheService implements CacheServiceInterface {
     }
 
     /**
-     * @see CacheServiceInterface#get(long)
+     * @see edu.sjsu.cmpe.cache.client.cacheService.CacheServiceInterface#get(long)
      */
     @Override
     public String get(long key) {
@@ -35,7 +35,7 @@ public class DistributedCacheService implements CacheServiceInterface {
     }
 
     /**
-     * @see CacheServiceInterface#put(long,
+     * @see edu.sjsu.cmpe.cache.client.cacheService.CacheServiceInterface#put(long,
      *      java.lang.String)
      */
     @Override
