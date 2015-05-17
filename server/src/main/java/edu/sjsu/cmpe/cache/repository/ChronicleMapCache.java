@@ -13,14 +13,14 @@ import edu.sjsu.cmpe.cache.domain.Entry;
 
 public class ChronicleMapCache implements CacheInterface{
     private static String tmpDir = System.getProperty("java.io.tmpdir");
-    private static String pathname = tmpDir + "/chronicleHM.txt";
+    private static String pathname = tmpDir + "/";
     private File file;
 	private ConcurrentMap<Long, Entry> map;
 	
-	public ChronicleMapCache() {
+	public ChronicleMapCache(String fileName) {
 		ChronicleMapBuilder<Long, Entry> builder = ChronicleMapBuilder.of(Long.class, Entry.class)
 				.entries(100);
-		
+		pathname = pathname + fileName + ".txt";
 		file = new File(pathname);
 		
 		try{
